@@ -7,7 +7,8 @@ import Cards from "./component/Cards";
 import Menu from "./component/Menu";
 import Services from "./component/Services";
 import Contact from "./component/Contact";
-import SignIn from "./component/Signin";      
+import SignIn from "./component/Signin";  
+import SignUp from "./component/Signup"    
 
 
 function App() {
@@ -27,7 +28,9 @@ function App() {
           }
         />
         <Route path="/menu" element={<Menu />} />
-        <Route path="/signin" element={<SignIn />} />   
+        <Route path="/signin" element={<SignIn />} /> 
+                  <Route path="/signup" element={<SignUp />} /> 
+
       </Routes>
     </Router>
   );
