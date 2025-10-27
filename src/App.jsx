@@ -4,13 +4,16 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./component/Navbar";
 import Hero from "./component/Hero";
 import Cards from "./component/Cards";
-import Menu from "./component/Menu"; // <-- import Food.jsx
+import Menu from "./component/Menu";
+import Services from "./component/Services";
+import Contact from "./component/Contact";
+import SignIn from "./component/Signin";      
+
 
 function App() {
   return (
     <Router>
-      <Navbar /> {/* Navbar is shown on all pages */}
-
+      <Navbar />
       <Routes>
         <Route
           path="/"
@@ -18,10 +21,13 @@ function App() {
             <>
               <Hero />
               <Cards />
+              <Services />
+              <Contact />
             </>
           }
         />
-        <Route path="/Menu" element={<Menu />} />
+        <Route path="/menu" element={<Menu />} />
+        <Route path="/signin" element={<SignIn />} />   
       </Routes>
     </Router>
   );
